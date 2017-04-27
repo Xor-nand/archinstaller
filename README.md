@@ -1,42 +1,23 @@
 # archinstaller
-# Installer per archlinux semplificato con una guida in italiano
+## *Installer per archlinux semplificato con una guida in italiano*
+#### buon divertimento:
 
-Segui la guida per installare Arch o almeno per provarci:
-
-====== THANKS FOR CHOOSING XOR'S ARCH LINUX ======
-
-====== this is the official Xor's ArchLinux installation guide
-
-====== !! WARNING : please do not use this guide INSTEAD of the Arch wiki. It is a bad idea.
-
-
--- intro --
-
+#### -- intro --
 Credo, se stai leggendo questa guida, che tu stia tentando di installare Arch su una macchina, e che tu sia arrivato al punto di caricare la iso e premere su "Boot Arch Linux nel mennu principale"
-
 Sarai gia stato invitato da un caloroso benvenuto della shell, ZSH, che a primo impatto risulta simile a :
 
-==
-root@archiso ~ # _
-==
+<root@archiso ~ # _ >
 
-
--- partizionamento --
-
+#### -- partizionamento --
 Ora avrai bisogno di prenderti qualche minuto, a lume di candela(opzionale) per partizionare l'HDD
-
 Mi sembra quindi un buon momento per ricordarti un paio di punti importanti
 
  - Se sei un esperto, non seguire questa guida, e' rischioso per la tua salute mentale.
-
  - Se sei invece un novellino, non seguirla comunque. O almeno non come unica risorsa. Uniscila piuttosto ad un sano utilizzo della wiki.
-
  - Se non ti senti pronto ad installare arch, antergos e' una comodissima alternativa molto piu' user friendly.
-
  - Ogni parte di questa guida compresa tra " == " e' inteso come output tty
 
 Detto questo partiamo col partizionamento.
-
 Comincia scrivendo "fdisk -l", l'output ci dara' tutti i dischi disponibili, cosi' possiamo scegliere su quale installare il nostro sistema evitando di pulire tutti i dati sbagliati.
 
 ==
