@@ -101,8 +101,8 @@ Digita nel terminale ``arch-chroot /mnt``, questo ci permetterà di accedere al 
 root@archiso ~ # arch-chroot /mnt
 [root@archiso /]#
 ```
+Se il comando ti ha reindirizzato alla shell dentro ``/mnt`` come nell'esempio allora è il momento giusto per attivare lo script di configurazione:
 
-Se il comando ti ha reindirizzato alla shell dentro ``/mnt``, allora è il momento giusto per generare una nuova password di root con il comando ``passwd``.
 
 ##########################################
 
