@@ -15,7 +15,6 @@ Mi sembra quindi un buon momento per ricordarti un paio di punti importanti
  - Se sei un esperto, non seguire questa guida, è rischioso per la tua salute mentale.
  - Se sei invece un novellino, non seguirla comunque. O almeno non come unica risorsa. Uniscila piuttosto ad un sano utilizzo della wiki.
  - Se non ti senti pronto ad installare arch, antergos è una comodissima alternativa molto più user friendly.
- - Ogni parte di questa guida compresa tra ``==`` è inteso come output tty
 
 Detto questo partiamo col partizionamento.
 Comincia scrivendo ``fdisk -l`` , l'output ci darà tutti i dischi disponibili, così possiamo scegliere su quale installare il nostro sistema evitando di pulire tutti i dati sbagliati.
