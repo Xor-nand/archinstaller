@@ -95,43 +95,19 @@ Se sei arrivato a questo punto della guida ipotizzo che non ci siano stati error
 
 Dunque siamo al passaggio piu delicato, se tutto è andato come si deve allora non ci saranno problemi.
 
+ora il tuo sistema e' installato, ma prima di accedervi abbiamo bisogno di sistemare un paio di cose:
+
 Digita nel terminale ``arch-chroot /mnt``, questo ci permetterà di accedere al sistema e completare qualche configurazione prima di concludere l'installazione.
 
 ```
 root@archiso ~ # arch-chroot /mnt
 [root@archiso /]#
 ```
-Se il comando ti ha reindirizzato alla shell dentro ``/mnt`` come nell'esempio allora è il momento giusto per attivare lo script di configurazione:
+Se il comando ti ha reindirizzato alla shell dentro ``/mnt`` come nell'esempio allora è il momento giusto per attivare lo script di configurazione finale.
 
+Ma prima cambia la password, utilizzando il comando ``passwd``, cosi possiamo utilizzare l'utente root con facilita'
 
-##########################################
+ora ti rimane un solo step, devi avviare lo script di configurazione con il comando ``./final.sh``
+Lo script ti seguira' negli ultimi passi di installazione.
 
-
-/etc/locale.gen #su github
-da rimuovere gli hashtag vicino ad italia
-
-usr/share/zoneinfo
-ls
-tuutti i vari posti strani dove sta la roba
-usr/share/zoneinfo/europe eccetera
-
-ln -s /usr/share/zoneinfo/europe eccetera /etc/localtime
-
-echo hostname (da definire dall'utente) > /etc/hostname
-
-vuoi installare grub?
-
-pacman -S grub-bios
-installazione grub
-grub-install /dev/sda (NON SDA2 o 1)
-mkinitcpio -p linux
-file per hardware connessione
-grub-mkconfig -o /boot/grub/grub.cfg
-exit
-per uscire da chroot
-
-genfstab /mnt >> /mnt/etc/fstab
-
-fine
-
-umount /mnt
+### buon divertimento :)
