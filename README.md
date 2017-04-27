@@ -6,7 +6,7 @@
 Credo, se stai leggendo questa guida, che tu stia tentando di installare Arch su una macchina, e che tu sia arrivato al punto di caricare la iso e premere su "Boot Arch Linux nel mennu principale"
 Sarai gia stato invitato da un caloroso benvenuto della shell, ZSH, che a primo impatto risulta simile a :
 
-<root@archiso ~ # _ >
+  root@archiso ~ # _ 
 
 #### -- partizionamento --
 Ora avrai bisogno di prenderti qualche minuto, a lume di candela(opzionale) per partizionare l'HDD
