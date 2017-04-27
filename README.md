@@ -77,7 +77,7 @@ Disklabel type: dos
 Disk identifier: 0xd66c8888
 
 Device Boot Start   End   Sectors   Size Id Type
-/dev/sda1   781461504 961148925 179687422   1G83 Linux
+/dev/sda1   781461504 961148925 179687422   1G  83 Linux
 /dev/sda2   961148928 976771071  15622144   15.5G 82 Linux swap
 ```
 
