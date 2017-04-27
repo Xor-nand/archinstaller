@@ -57,7 +57,7 @@ Prossima partizione:
 Freccia in basso per selezionare la partizione ancora ``Free Space`` e seleziono ``New``
 Una volta inserita la grandezza in gigabyte (per riempire l'intera partizione è sufficente premere invio) torno su ``Type`` e stavolta seleziono ``linux filesystem``.
 
-Ora basterà premere su ``write`` e le partizioni verranno tutte scritte su disco.
+Ora basterà premere su ``write``, scrivere `` yes`` e le partizioni verranno tutte scritte su disco.
 
 Una volta finito il partizionamento sarà possibile premere su ``Quit``.
 
@@ -85,9 +85,9 @@ Tutto è andato secondo i piani.
 
 A questo punto possiamo cominciare l'installazione. Cominciamo con un po' di script che dovrebbero aiutarci un po'.
 
-Intanto scarica lo script con wget, utilizzando il comando ``wget -O begin.sh https://raw.githubusercontent.com/tommasoascari/archinstaller/master/begin.sh``.
+Intanto scarica lo script con wget, utilizzando il comando ``wget -O begin.sh https://raw.githubusercontent.com/tommasoascari/archinstaller/master/scripts/installer.sh``.
 
-con questo comando lo script dovrebbe andare in esecuzione: ``chmod 755 begin.sh; ./begin.sh``.
+con questo comando lo script dovrebbe andare in esecuzione: ``chmod 755 installer.sh; ./installer.sh``.
 
 ## -- ritorno dallo script --
 
