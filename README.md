@@ -5,9 +5,9 @@
 #### -- intro --
 Credo, se stai leggendo questa guida, che tu stia tentando di installare Arch su una macchina, e che tu sia arrivato al punto di caricare la iso e premere su "Boot Arch Linux nel mennu principale"
 Sarai gia stato invitato da un caloroso benvenuto della shell, ZSH, che a primo impatto risulta simile a :
-
+```
   root@archiso ~ # _ 
-
+```
 #### -- partizionamento --
 Ora avrai bisogno di prenderti qualche minuto, a lume di candela(opzionale) per partizionare l'HDD
 Mi sembra quindi un buon momento per ricordarti un paio di punti importanti
@@ -18,46 +18,45 @@ Mi sembra quindi un buon momento per ricordarti un paio di punti importanti
  - Ogni parte di questa guida compresa tra " == " e' inteso come output tty
 
 Detto questo partiamo col partizionamento.
-Comincia scrivendo "fdisk -l", l'output ci dara' tutti i dischi disponibili, cosi' possiamo scegliere su quale installare il nostro sistema evitando di pulire tutti i dati sbagliati.
-
-==
+Comincia scrivendo ```fdisk -l``` , l'output ci dara' tutti i dischi disponibili, cosi' possiamo scegliere su quale installare il nostro sistema evitando di pulire tutti i dati sbagliati.
+```
 root@archiso ~ # fdisk -l
 
 Disk /dev/sda: 16.5 GiB, 17753428394 bytes, 973168 sectors
 Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
-==
+```
 
-Nel mio caso ho solo un hard disk, in "/dev/sda", se avessi piu' di un HDD vedrei sotto al primo disk anche un secondo "/dev/sdb" o qualcosa di relativamente simile.
+Nel mio caso ho solo un hard disk, in ```/dev/sda```, se avessi piu' di un HDD vedrei sotto al primo disk anche un secondo ```/dev/sdb``` o qualcosa di relativamente simile.
 
-Tieni bene a mente l'hard disk che hai scelto sul quale andrai ad installare Arch, e digita il comando "cfdisk /dev/sdx " per lanciare il manager di partizioni sul disco scelto, mettendo il nome del tuo disco al posto di "/dev/sdx "
+Tieni bene a mente l'hard disk che hai scelto sul quale andrai ad installare Arch, e digita il comando ```cfdisk /dev/sdx ``` per lanciare il manager di partizioni sul disco scelto, mettendo il nome del tuo disco al posto di "/dev/sdx "
 
-==
+```
 root@archiso ~ # cfdisk /dev/sda
-==
+```
 
 (nel caso in cui appaia un dialogo premi invio senza problemi)
 
-Dopo aver fatto partire cfdisk sarai reindirizzato alla applicazione, dove se tutto e' andato come si deve vedrai in alto scritto il nome del tuo hard disk, vicino a "Disk Drive :".
+Dopo aver fatto partire cfdisk sarai reindirizzato alla applicazione, dove se tutto e' andato come si deve vedrai in alto scritto il nome del tuo hard disk, vicino a ```Disk Drive :```.
 
 puoi vedere ora elencate le partizioni del tuo disco.
 
-Nel mio caso il disco e' completamente vuoto e mi mostra solo una partizione "Free Space", sta a te decidere se vuoi usare una partizione vuota o eliminarne una e sovrascriverla (selezionandola con le freccette DX e SX e cliccando su delete) ma in entrambi i casi avrai bisogno di due partizioni nuove per installare arch :
+Nel mio caso il disco e' completamente vuoto e mi mostra solo una partizione ```Free Space```, sta a te decidere se vuoi usare una partizione vuota o eliminarne una e sovrascriverla (selezionandola con le freccette DX e SX e cliccando su delete) ma in entrambi i casi avrai bisogno di due partizioni nuove per installare arch :
 
 - una swap
 - un contenitore principale
 
-per realizzarle premi su "new", e inserisci la dimensione della swap che preferisci, io la realizzero' di un gigabyte, meta' la dimensione della mia ram, scrivendo "1G" e premendo invio
+per realizzarle premi su ```new```, e inserisci la dimensione della swap che preferisci, io la realizzero' di un gigabyte, meta' la dimensione della mia ram, scrivendo ```1G``` e premendo invio
 
-senza deselezionare la partizione, con la freccia a destra seleziono "Type" e successivamente "Linux Swap"
+senza deselezionare la partizione, con la freccia a destra seleziono ```Type``` e successivamente ```Linux Swap```
 
 Prossima partizione
 
-Freccia in basso per selezionare la partizione ancora "Free Space" e seleziono "New"
-Una volta inserita la grandezza in Gigabyte (per riempire l'intera partizione e' sufficente premere invio) torno su type e stavolta seleziono "linux filesystem"
+Freccia in basso per selezionare la partizione ancora ```Free Space``` e seleziono ```New```
+Una volta inserita la grandezza in Gigabyte (per riempire l'intera partizione e' sufficente premere invio) torno su type e stavolta seleziono ```linux filesystem```
 
-ora bastera' premere su "write" e le partizioni verranno tutte scritte su disco
+ora bastera' premere su ```write``` e le partizioni verranno tutte scritte su disco
 
 una volta finito il partizionamento sara' possibile premere su "quit"
 
