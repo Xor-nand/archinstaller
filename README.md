@@ -58,14 +58,14 @@ Una volta inserita la grandezza in Gigabyte (per riempire l'intera partizione e'
 
 ora bastera' premere su ```write``` e le partizioni verranno tutte scritte su disco
 
-una volta finito il partizionamento sara' possibile premere su "quit"
+una volta finito il partizionamento sara' possibile premere su ```quit```
 
 
--- installazione pt 1 --
+#### -- installazione pt 1 --
 
-Tutte le partizioni sono state scritte, o almeno in teoria, per controllare bastera' digitare "fdisk -l" e controllare che il disco /dev/sdx che avevi usato prima sia ora pieno con le due partizioni che abbiamo appena realizzato.
+Tutte le partizioni sono state scritte, o almeno in teoria, per controllare bastera' digitare ```fdisk -l``` e controllare che il disco ```/dev/sdx``` che avevi usato prima sia ora pieno con le due partizioni che abbiamo appena realizzato.
 
-==
+```
 root@archiso ~ # fdisk -l
 
 Disk /dev/sda: 16.5GiB, 500107862016 bytes, 976773168 sectors
@@ -78,30 +78,31 @@ Disk identifier: 0xd66c8888
 Device Boot Start   End   Sectors   Size Id Type
 /dev/sda1   781461504 961148925 179687422   1G83 Linux
 /dev/sda2   961148928 976771071  15622144   15.5G 82 Linux swap
-==
+```
 
 Tutto e' andato secondo i piani.
 
 A questo punto possiamo cominciare l'installazione. Cominciamo con un po di script che dovrebbero aiutarci un po'
 
-Intanto scarica lo script con wget, utilizzando il comando "wget -O begin.sh https://raw.githubusercontent.com/tommasoascari/archinstaller/master/begin.sh"
+Intanto scarica lo script con wget, utilizzando il comando
+```
+wget -O begin.sh https://raw.githubusercontent.com/tommasoascari/archinstaller/master/begin.sh
+```
+una volta installato, con questo comando lo script dovrebbe andare in esecuzione: ```chmod 755 begin.sh; ./begin.sh```
 
-con questo comando lo script dovrebbe andare in esecuzione: "chmod 755 begin.sh; ./begin.sh"
-
--- ritorno dallo script --
+#### -- ritorno dallo script --
 
 Se sei arrivato a questo punto della guida ipotizzo che non ci siano stati errori prima e che il tuo sistema sia quasi pronto a partire
-
 Dunque siamo al passaggio piu delicato, se tutto e' andato come si deve allora non ci saranno problemi
 
-digita nel terminale "arch-chroot /mnt", questo ci permettera' di accedere al sistema e completare qualche configurazione prima di concludere l'installazione
-
-==
+digita nel terminale ```arch-chroot /mnt```, questo ci permettera' di accedere al sistema e completare qualche configurazione prima di concludere l'installazione
+```
 root@archiso ~ # arch-chroot /mnt
 [root@archiso /]#
-==
+```
+se il comando ti ha reindirizzato alla shell dentro ```/mnt``` come nell'esempio allora e' il momento giusto per attivare lo script di configurazione:
 
-se il comando ti ha reindirizzato alla shell dentro /mnt, allora e' il momento giusto per generare una nuova password di root con il comando "passwd"
+
 
 ##########################################
 
