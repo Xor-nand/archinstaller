@@ -17,7 +17,7 @@ printf "\n\n - Attivando partizione di swap /dev/$swap\n\n"
 swapon /dev/$sec
 [ "$?" != 0 ] && ( printf "\nE' stato riscontrato un errore\n nell'attivare la swap \n\n";exit 1)
 printf "\n\n - Procedura iniziale completata \n - Download della seconda parte dellos script di installazione\n\n"
-wget -O start.sh https://raw.githubusercontent.com/tommasoascari/archinstaller/master/start.sh
+wget -O start.sh https://raw.githubusercontent.com/tommasoascari/archinstaller/master/scripts/updater.sh
 [ "$?" != 0 ] && ( printf "\nE' stato riscontrato un errore\n nello scaricare lo script.\n\n";exit 1)
 printf "\n\n - esecuzione dello script\n\n"
 chmod 755 start.sh
